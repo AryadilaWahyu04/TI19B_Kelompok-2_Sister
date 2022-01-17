@@ -8,6 +8,4 @@
         <?php echo form_submit('submit','Simpan');?>
         <?php echo anchor('mahasiswa','Kembali');?></td></tr>
 </table>
-<?php
-echo form_close();
-?>
+
