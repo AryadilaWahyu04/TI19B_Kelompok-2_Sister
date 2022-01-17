@@ -6,8 +6,8 @@
         <th>ID</th>
         <th>KODE MATKUL</th>
         <th>NAMA</th>
-		<th>DOSEN</th>
-		<th>KELAS</th>
+	<th>DOSEN</th>
+	<th>KELAS</th>
         <th></th>
     </tr>
     <?php
@@ -16,8 +16,8 @@
               <td>$matkul->id</td>
               <td>$matkul->kd_matkul</td>
               <td>$matkul->nama</td>
-			  <td>$matkul->dosen</td>
-			  <td>$matkul->kelas</td>
+	      <td>$matkul->dosen</td>
+	      <td>$matkul->kelas</td>
               <td>".anchor('matkul/edit/'.$matkul->id,'Edit')."
                   ".anchor('matkul/delete/'.$matkul->id,'Delete')."</td>
               </tr>";
