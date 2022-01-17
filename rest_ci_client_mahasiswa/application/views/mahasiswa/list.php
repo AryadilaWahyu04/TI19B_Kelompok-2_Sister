@@ -1,23 +1,21 @@
 <font color="orange">
-    <?php echo $this->session->flashdata('hasil'); ?>
+<?php echo $this->session->flashdata('hasil'); ?>
 </font>
 <table border="1">
-    <tr>
-        <th>ID</th>
-        <th>NAMA</th>
-        <th>NOMOR</th>
-        <th></th>
-    </tr>
+    <tr><th>ID</th><th>NIM</th><th>NAMA</th><th>NOMOR</th><th>ALAMAT</th><th></th></tr>
     <?php
-    foreach ($datakontak as $kontak) {
+    foreach ($datamahasiswa as $mahasiswa){
         echo "<tr>
-              <td>$kontak->id</td>
-              <td>$kontak->nama</td>
-              <td>$kontak->nomor</td>
-              <td>" . anchor('kontak/edit/' . $kontak->id, 'Edit') . "
-                  " . anchor('kontak/delete/' . $kontak->id, 'Delete') . "</td>
+              <td>$mahasiswa->id</td>
+              <td>$mahasiswa->nim</td>
+              <td>$mahasiswa->nama</td>
+              <td>$mahasiswa->nomor</td>
+              <td>$mahasiswa->alamat</td>
+              <td>".anchor('mahasiswa/edit/'.$mahasiswa->id,'Edit')."
+                  ".anchor('mahasiswa/delete/'.$mahasiswa->id,'Delete')."</td>
               </tr>";
     }
     ?>
 </table>
-<a href="http://localhost/rest_ci_client/index.php/kontak/create">+ Tambah data<a>
+
+<a href="http://192.168.100.5/rest_ci_client/index.php/mahasiswa/create"> + Tambah data</a>
