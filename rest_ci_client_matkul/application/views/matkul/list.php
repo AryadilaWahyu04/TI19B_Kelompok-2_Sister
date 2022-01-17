@@ -4,20 +4,24 @@
 <table border="1">
     <tr>
         <th>ID</th>
+        <th>KODE MATKUL</th>
         <th>NAMA</th>
-        <th>NOMOR</th>
+		<th>DOSEN</th>
+		<th>KELAS</th>
         <th></th>
     </tr>
     <?php
-    foreach ($datakontak as $kontak) {
+    foreach ($datamatkul as $matkul) {
         echo "<tr>
-              <td>$kontak->id</td>
-              <td>$kontak->nama</td>
-              <td>$kontak->nomor</td>
-              <td>" . anchor('kontak/edit/' . $kontak->id, 'Edit') . "
-                  " . anchor('kontak/delete/' . $kontak->id, 'Delete') . "</td>
+              <td>$matkul->id</td>
+              <td>$matkul->kd_matkul</td>
+              <td>$matkul->nama</td>
+			  <td>$matkul->dosen</td>
+			  <td>$matkul->kelas</td>
+              <td>".anchor('matkul/edit/'.$matkul->id,'Edit')."
+                  ".anchor('matkul/delete/'.$matkul->id,'Delete')."</td>
               </tr>";
     }
     ?>
 </table>
-<a href="http://localhost/rest_ci_client/index.php/kontak/create">+ Tambah data<a>
+<a href="http://192.168.100.16/rest_ci_client/index.php/matkul/create"> + Tambah data</a>
